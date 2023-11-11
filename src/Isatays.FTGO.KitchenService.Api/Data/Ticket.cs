@@ -4,16 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Isatays.FTGO.KitchenService.Api.Data;
 
 [Table("Ticket")]
-public class Ticket
+public class Ticket : IEntity
 {
-    [Key]
-    public int Id { get; set; }
+    public string Name { get; set; } = string.Empty;
 
-    public string Name { get; set; }
-
-    public string Description { get; set; }
+    public string Description { get; set; } = string.Empty;
 
     public DateTime CreatedDate { get; set; }
     
-    public DateTime UpdatedDate { get; set; }
+    public DateTime? UpdatedDate { get; set; }
 }

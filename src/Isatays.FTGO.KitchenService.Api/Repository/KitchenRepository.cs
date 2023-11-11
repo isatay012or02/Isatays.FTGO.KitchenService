@@ -1,20 +1,19 @@
-﻿using Isatays.FTGO.KitchenService.Api.Repository.IRepository;
+﻿using Isatays.FTGO.KitchenService.Api.Data;
+using Isatays.FTGO.KitchenService.Api.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 
 namespace Isatays.FTGO.KitchenService.Api.Repository;
 
-public class KitchenRepository<TEntity, TContext> : IRepository<TEntity>
-	where TEntity : class 
-	where TContext : DbContext
+public class KitchenRepository : IKitchenRepository
 {
-    private readonly TContext _context;
+    private readonly DataContext _context;
 
-	public KitchenRepository(TContext context)
+	public KitchenRepository(DataContext context)
 	{
 		_context = context;
 	}
 
-	public async Task<TEntity> Add(TEntity entity)
+	public async Task<TEntity> Add<TEntity>(TEntity entity) where TEntity : IEntity
 	{
 		await _context.Set<TEntity>().AddAsync(entity);
 		await _context.SaveChangesAsync();
