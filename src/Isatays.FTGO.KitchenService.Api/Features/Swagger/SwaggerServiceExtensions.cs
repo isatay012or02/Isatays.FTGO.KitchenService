@@ -24,8 +24,6 @@ public static class SwaggerServiceExtensions
 
         services.AddSwaggerGen(/*options => { options.AddXmlComment(typeof(BaseController).Assembly); }*/);
 
-        services.AddSwaggerGenNewtonsoftSupport();
-
         return services;
     }
 
