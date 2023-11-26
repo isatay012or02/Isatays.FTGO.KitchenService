@@ -4,7 +4,7 @@ using Isatays.FTGO.KitchenService.Api.Repository.IRepository;
 using Isatays.FTGO.KitchenService.Api.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace Isatays.FTGO.KitchenService.Api.Common.Extensions;
+namespace Isatays.FTGO.KitchenService.Api.Features.Extensions;
 
 public static class ServiceCollectionExtensions
 {

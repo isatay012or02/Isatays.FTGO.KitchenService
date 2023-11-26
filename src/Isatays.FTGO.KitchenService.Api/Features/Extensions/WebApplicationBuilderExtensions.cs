@@ -7,7 +7,7 @@ using System.Text.Json;
 using System.Reflection;
 using Microsoft.AspNetCore.Http.Json;
 
-namespace Isatays.FTGO.KitchenService.Api.Common.Extensions;
+namespace Isatays.FTGO.KitchenService.Api.Features.Extensions;
 
 [ExcludeFromCodeCoverage]
 public static class WebApplicationBuilderExtensions
@@ -50,12 +50,12 @@ public static class WebApplicationBuilderExtensions
             c.SwaggerDoc("v1", new OpenApiInfo
             {
                 Version = "V1",
-                Title = $"CleanMinimalApi {ti.ToTitleCase(builder.Environment.EnvironmentName)} API",
-                Description = "An example API to show an implementation of .net 6's Minimal Api feature.",
+                Title = $"{ti.ToTitleCase(builder.Environment.EnvironmentName)} API",
+                Description = "This API to show an implementation of KitchenService",
                 Contact = new OpenApiContact
                 {
-                    Name = "Example Person",
-                    Email = "example@person.com"
+                    Name = "Isatay Abdrakhmanov",
+                    Email = "isaa012or02@gmail.com"
                 }
             });
             c.TagActionsBy(api => new[] { api.GroupName });

@@ -11,11 +11,7 @@ public class KitchenService : IKitchenService
     private readonly IKitchenRepository _kitchenRepository;
 	private readonly ILogger<KitchenService> _logger;
 
-	public KitchenService(IKitchenRepository kitchenRepository, ILogger<KitchenService> logger)
-	{
-		_kitchenRepository = kitchenRepository;
-		_logger = logger;
-	}
+	public KitchenService(IKitchenRepository kitchenRepository, ILogger<KitchenService> logger) => (_kitchenRepository, _logger) = (kitchenRepository, logger);
 
 	public async Task<Result<Ticket>> CreateTicket(string name, string discription)
 	{

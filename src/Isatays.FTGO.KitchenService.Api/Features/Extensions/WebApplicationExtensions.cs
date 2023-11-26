@@ -1,8 +1,9 @@
-﻿using Serilog;
+﻿using Isatays.FTGO.KitchenService.Api.Common.Extensions;
+using Serilog;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 
-namespace Isatays.FTGO.KitchenService.Api.Common.Extensions;
+namespace Isatays.FTGO.KitchenService.Api.Features.Extensions;
 
 [ExcludeFromCodeCoverage]
 public static class WebApplicationExtensions

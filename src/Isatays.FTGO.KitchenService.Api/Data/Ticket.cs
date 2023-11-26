@@ -1,9 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Isatays.FTGO.KitchenService.Api.Data;
 
-[Table("Ticket")]
+[Table(name: "Ticket", Schema = "KitchenService")]
 public class Ticket : IEntity
 {
     public string Name { get; set; } = string.Empty;
