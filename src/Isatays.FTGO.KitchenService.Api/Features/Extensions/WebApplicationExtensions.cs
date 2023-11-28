@@ -27,7 +27,7 @@ public static class WebApplicationExtensions
         var ti = CultureInfo.CurrentCulture.TextInfo;
 
         _ = app.UseSwagger();
-        _ = app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", $"CleanMinimalApi - {ti.ToTitleCase(app.Environment.EnvironmentName)} - V1"));
+        _ = app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", $"{ti.ToTitleCase(app.Environment.EnvironmentName)} - V1"));
 
         #endregion Swagger
 

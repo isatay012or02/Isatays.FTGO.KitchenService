@@ -10,8 +10,6 @@ try
     app.UseMiddleware<LoggingMiddleware>();
     app.UseMiddleware<ExceptionHandleMiddleware>();
 
-    app.MapHealthChecks("/healthcheck");
-
     app.ConfigureKitchenEndpoints();
 
     app.Run();
