@@ -11,7 +11,7 @@ public static class KitchenEndpoint
 {
     public static void ConfigureKitchenEndpoints(this WebApplication app)
     {
-        app.MapPost("api/kitchen", CreateTicket)
+        app.MapPost("api/kitchen/create-ticket", CreateTicket)
             .WithName(nameof(CreateTicket))
             .WithGroupName("Kitchen")
             .Produces<Ticket>(StatusCodes.Status201Created, contentType: MediaTypeNames.Application.Json)
@@ -24,6 +24,6 @@ public static class KitchenEndpoint
     {
         var result = await kitchenService.CreateTicket(request.Name, request.Description);
 
-        return Results.Created(string.Empty, result.Value); ;
+        return Results.Created(string.Empty, result.Value);
     }
 }
